@@ -36,16 +36,18 @@ Para entender a diferença entre autenticação e autorização, pense em um jog
 
 ## 🛡️ Não utilizaremos a autenticação com Token (JWT)
 
-Mas aqui está uma breve explicação do que é o **JWT (JSON Web Token)**, é um formato de token compacto e seguro para transmitir informações entre partes como um objeto JSON. Ele é frequentemente utilizado em sistemas de autenticação e autorização.
+Mas aqui está uma breve explicação para você ficar informado sobre o que é o **JWT (JSON Web Token)**, é um formato de token compacto e seguro para transmitir informações entre partes como um objeto JSON. Ele é frequentemente utilizado em sistemas de autenticação e autorização.
 
 **Como Funciona:**
 
 **Estrutura:** Um JWT é composto por três partes: header (cabeçalho), payload (corpo) e signature (assinatura). O cabeçalho define o algoritmo de assinatura, o corpo contém as informações ou claims (como ID do usuário e permissões), e a assinatura garante que o token não foi alterado.
-Geração e Validação: O servidor gera o JWT ao autenticar um usuário e o envia ao cliente. O cliente armazena o token e o inclui em requisições subsequentes. O servidor valida a assinatura do token para verificar sua integridade e autenticidade antes de processar a requisição.
+
+**Geração e Validação:** O servidor gera o JWT ao autenticar um usuário e o envia ao cliente. O cliente armazena o token e o inclui em requisições subsequentes. O servidor valida a assinatura do token para verificar sua integridade e autenticidade antes de processar a requisição.
 **Benefícios:**
 
 **Compacto:** Ideal para transmissão em cabeçalhos HTTP e URLs.
 Auto-Suficiente: Contém todas as informações necessárias para autenticação e autorização, reduzindo a necessidade de consultas adicionais ao banco de dados.
+
 **Segurança:** Permite garantir a integridade dos dados com uma assinatura digital, e pode ser criptografado para maior proteção.
 JWT é útil para sistemas distribuídos e APIs, proporcionando uma maneira eficiente e segura de gerenciar sessões e permissões de usuários.
 
