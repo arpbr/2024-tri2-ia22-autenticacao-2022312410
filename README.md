@@ -1,9 +1,9 @@
 # 😁 Projeto de Autenticação e Autorização
 
 ## 🚀 Autenticação de Usuários a Único Servidor (Single Server).
-```
+````
 A autenticação é como verificar o cartão de um membro para garantir que ele tem permissão para entrar em um clube. Em um servidor único, toda a autenticação é gerenciada por um único servidor, o que simplifica a administração.
-```
+````
 ### **Fluxo Básico da Autenticação**:
 1. **Registro do Usuário**: O usuário se registra fornecendo suas credenciais, como nome de usuário e senha. Essas informações são armazenadas de forma segura no banco de dados do servidor.
 2. **Login**: O usuário insere suas credenciais para acessar o sistema. O servidor confere se essas informações coincidem com as que estão armazenadas.
