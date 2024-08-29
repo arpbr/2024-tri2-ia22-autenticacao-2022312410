@@ -1,9 +1,9 @@
 # 😁 Projeto de Autenticação e Autorização
 
 ## 🚀 Autenticação de Usuários a Único Servidor (Single Server).
-````
-A autenticação é como verificar o cartão de um membro para garantir que ele tem permissão para entrar em um clube. Em um servidor único, toda a autenticação é gerenciada por um único servidor, o que simplifica a administração.
-````
+
+A **autenticação** é como verificar o cartão de um membro para garantir que ele tem permissão para entrar em um clube. Em um servidor único, toda a autenticação é gerenciada por um único servidor, o que simplifica a administração.
+
 ### **Fluxo Básico da Autenticação**:
 1. **Registro do Usuário**: O usuário se registra fornecendo suas credenciais, como nome de usuário e senha. Essas informações são armazenadas de forma segura no banco de dados do servidor.
 2. **Login**: O usuário insere suas credenciais para acessar o sistema. O servidor confere se essas informações coincidem com as que estão armazenadas.
@@ -34,24 +34,9 @@ Para entender a diferença entre autenticação e autorização, pense em um jog
 
 ---
 
-## 🛡️ Autenticação com Token (JWT)
+## 🛡️ Não utilizaremos a autenticação com Token (JWT)
 
-O JWT (JSON Web Token) é como um passaporte digital que você recebe após se registrar. Ele permite que você prove sua identidade e acesse áreas protegidas sem precisar se autenticar novamente a cada vez.
-
-### **Como Funciona**:
-1. **Login**: O usuário se autentica fornecendo suas credenciais.
-2. **Geração do Token**: Após uma autenticação bem-sucedida, o servidor gera um JWT. Este token contém informações sobre o usuário (chamadas de "claims") e é assinado com uma chave secreta para garantir que não possa ser alterado.
-3. **Envio do Token**: O JWT é enviado ao cliente e pode ser armazenado no navegador (em cookies ou localStorage).
-4. **Uso do Token**: Em requisições subsequentes, o cliente inclui o JWT no cabeçalho HTTP. O servidor verifica a validade do token antes de conceder acesso aos recursos.
-5. **Validação do Token**: O servidor usa a chave secreta para verificar a assinatura do token e garantir que ele não foi alterado. Se o token for válido, o acesso ao recurso é permitido.
-
-### **Aspectos Técnicos**:
-- **Estrutura do JWT**: Um JWT é composto por três partes:
-  - **Cabeçalho (Header)**: Especifica o algoritmo de assinatura usado, como HMAC SHA256 ou RSA.
-  - **Corpo (Payload)**: Contém as "claims", que são declarações sobre o usuário, como seu ID e permissões. As claims podem ser "registered" (como `sub` para ID do usuário), "public" (definidas pelo usuário), e "private" (específicas do aplicativo).
-  - **Assinatura (Signature)**: A assinatura é gerada usando o cabeçalho e o corpo com uma chave secreta. Isso garante que o token não foi modificado.
-  
-- **Algoritmos de Assinatura**: Os JWTs podem ser assinados usando algoritmos simétricos (HMAC) ou assimétricos (RSA). HMAC usa uma chave secreta compartilhada, enquanto RSA usa um par de chaves (pública e privada) para garantir a segurança.
+Mas aqui está uma breve explicação do que é o **JWT (JSON Web Token)**, é como um passaporte digital que você recebe após se registrar. Ele permite que você prove sua identidade e acesse áreas protegidas sem precisar se autenticar novamente a cada vez.
 
 ---
 
